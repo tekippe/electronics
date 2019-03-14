@@ -1,7 +1,7 @@
-int ledPin = 9;
+int ledPin = 10;
 
 void setup(){
 }
 
 void loop(){
-}
+} 
