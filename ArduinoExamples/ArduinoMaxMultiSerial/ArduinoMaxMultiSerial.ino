@@ -23,6 +23,16 @@ void loop() {
   // put your main code here, to run repeatedly:
   if(Serial.available() > 0){
     inByte = Serial.read();
+    //Serial.print("inByte = ");
+    //Serial.println(inByte);
+    if(inByte == 70){
+      digitalWrite(LEDPIN, HIGH);
+      tone(PIEZOPIN, 185, 250);
+    }
+    if(inByte == 71){
+      digitalWrite(LEDPIN, LOW);
+      noTone(PIEZOPIN);
+    }
     pot1 = analogRead(A0);
     pot2 = analogRead(A1);
     pot3 = analogRead(A2);
