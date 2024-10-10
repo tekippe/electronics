@@ -9,7 +9,7 @@ const int PIEZOPIN = 9;
 
 void setup() {
   // start serial port at 9600 bps and wait for port to open:
-  Serial.begin(9600);
+  Serial.begin(9600);//Open up the serial communication!
   while (!Serial) {
     ;  // wait for serial port to connect. Needed for native USB port only
   }
