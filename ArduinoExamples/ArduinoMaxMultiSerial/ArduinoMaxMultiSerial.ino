@@ -8,10 +8,14 @@ const int LEDPIN = 13;
 const int PIEZOPIN = 9;
 
 void setup() {
-  // put your setup code here, to run once:
+  // start serial port at 9600 bps and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ;  // wait for serial port to connect. Needed for native USB port only
+  }
   pinMode(BUTTON, INPUT);
   pinMode(LEDPIN, OUTPUT);
-  Serial.begin(9600);
+  establishContact();
 
 }
 
@@ -33,6 +37,12 @@ void loop() {
     Serial.println(switch1);
   }
 
+void establishContact() {
+  while (Serial.available() <= 0) {
+    Serial.println("0,0,0,0");  // send an initial string
+    delay(300);
+  }
+}
 
 
 
