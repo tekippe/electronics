@@ -36,14 +36,11 @@ void loop() {
     Serial.print(",");
     Serial.println(switch1);
   }
+}
 
 void establishContact() {
   while (Serial.available() <= 0) {
     Serial.println("0,0,0,0");  // send an initial string
     delay(300);
   }
-}
-
-
-
 }
