@@ -5,7 +5,7 @@ int switch1 = 0;
 int inByte = 0;
 const int BUTTON = 2;
 const int LEDPIN = 13;
-const int PIEZOPIN = 9;
+const int PIEZOPIN = 9;//Piezo has to be on a ~PWM pin
 
 void setup() {
   // start serial port at 9600 bps and wait for port to open:
@@ -25,11 +25,11 @@ void loop() {
     inByte = Serial.read();
     //Serial.print("inByte = ");
     //Serial.println(inByte);
-    if(inByte == 70){
+    if(inByte == 70){//Capital F
       digitalWrite(LEDPIN, HIGH);
       tone(PIEZOPIN, 185, 250);
     }
-    if(inByte == 71){
+    if(inByte == 71){//Capital G
       digitalWrite(LEDPIN, LOW);
       noTone(PIEZOPIN);
     }
