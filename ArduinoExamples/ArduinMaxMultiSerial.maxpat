@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 175.0, 87.0, 1132.0, 959.0 ],
+		"rect" : [ 69.0, 87.0, 1300.0, 959.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,43 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-76",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 502.097907185554504, 640.559447050094604, 40.0, 22.0 ],
+					"text" : "clip"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-75",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 511.188816368579865, 727.972035348415375, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-71",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 560.0, 489.0, 468.0, 22.0 ],
+					"text" : "48, 51, 397, 0"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"annotation" : "## VIZZIE video projector interface ##",
 					"bgmode" : 1,
@@ -82,7 +119,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 253.0, 632.0, 103.0, 22.0 ],
-					"text" : "scale 20 300 0. 1."
+					"text" : "scale 15 200 0. 1."
 				}
 
 			}
@@ -138,7 +175,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "jit_gl_texture" ],
-					"patching_rect" : [ 79.0, 856.0, 188.0, 130.0 ],
+					"patching_rect" : [ 93.5, 846.209790110588074, 188.0, 130.0 ],
 					"prototypename" : "pixl",
 					"varname" : "kaleidr",
 					"viewvisibility" : 1
@@ -1431,6 +1468,15 @@
 				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
 					"midpoints" : [ 170.5, 494.0, 114.5, 494.0 ],
+					"order" : 1,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 1 ],
+					"order" : 0,
 					"source" : [ "obj-7", 0 ]
 				}
 
